@@ -1,0 +1,12 @@
+.nav {
+	@apply flex items-center gap-7;
+	@media (max-width: 390px) {
+		@apply hidden;
+	}
+}
+
+.link {
+	> a {
+		@apply text-gray-600 text-xl transition-colors hover:text-black hidden md:block;
+	}
+}

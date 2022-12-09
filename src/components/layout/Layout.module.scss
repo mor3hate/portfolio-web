@@ -1,0 +1,6 @@
+.layout {
+	@apply flex flex-col min-h-screen relative;
+	.main {
+		flex: 1 1 auto;
+	}
+}
