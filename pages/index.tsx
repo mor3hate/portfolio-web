@@ -20,7 +20,7 @@ export async function getStaticProps() {
 		)
 
 		const technologies: ITechnologyGalleryItem[] = technologiesData.map(t => ({
-			imagePath: imageBuilder(t.image.asset._ref) || '',
+			imagePath: imageBuilder(t.image.asset._ref),
 			name: t.name,
 			progress: t.progress,
 			_id: t._id
@@ -31,7 +31,7 @@ export async function getStaticProps() {
 		)
 
 		const projects: IProjectContainerItem[] = projectsData.map(p => ({
-			imagePath: imageBuilder(p.image.asset._ref) || '',
+			imagePath: imageBuilder(p.image.asset._ref),
 			_id: p._id,
 			technologies: p.technologies,
 			title: p.title,
