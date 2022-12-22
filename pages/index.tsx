@@ -14,20 +14,21 @@ export async function getStaticProps() {
 		const { technologies: technologiesData } = await fetchHelper<ITechnologies>(
 			'getTechnologies'
 		)
-
+		//@ts-ignore
 		const technologies = []
 
 		const { projects: projectsData } = await fetchHelper<IProjects>(
 			'getProjects'
 		)
-
+		//@ts-ignore
 		const projects = []
 
 		const { about: aboutData } = await fetchHelper<IAbout>('getAbout')
-
+		//@ts-ignore
 		const about = []
 
 		return {
+			//@ts-ignore
 			props: { technologies, projects, about },
 			revalidate: 100
 		}
