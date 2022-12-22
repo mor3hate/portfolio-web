@@ -1412,6 +1412,17 @@
     get-it "^5.2.1"
     pkg-dir "^5.0.0"
 
+"@sanity/cli@^3.1.2":
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/@sanity/cli/-/cli-3.1.2.tgz#45841216b0adacd2b5a580dca5270c9862359720"
+  integrity sha512-rLW1zwYpv1lBCRGi5/va/rUKvADtZ1m2j+IwYOCsUvJ8x3rf+ZVBgbMHEa+zoXGWCf1Fsq3nxzF66mhjMdWPDg==
+  dependencies:
+    "@babel/traverse" "^7.19.0"
+    esbuild "^0.14.43"
+    esbuild-register "^3.3.2"
+    get-it "^5.2.1"
+    pkg-dir "^5.0.0"
+
 "@sanity/client@^3.4.1":
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/@sanity/client/-/client-3.4.1.tgz#d1bd02bafc50eb0aac8d5b6fab942da52549652f"
