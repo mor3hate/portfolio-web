@@ -1,0 +1,12 @@
+.sectionContainer {
+	@apply flex flex-col justify-center items-center w-screen snap-start h-screen mt-12;
+	&:nth-child(2) {
+		@apply snap-center;
+	}
+	&:nth-child(3) {
+		@apply snap-center;
+	}
+	&:nth-child(4) {
+		@apply h-full;
+	}
+}

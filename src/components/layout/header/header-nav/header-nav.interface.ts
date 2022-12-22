@@ -1,13 +1,15 @@
 export interface IHeaderNavItem {
 	link: string
 	text: string
+	variant?: string
 }
 
 export interface IHeaderNav {
 	links: IHeaderNavItem[]
+	variant: 'inside' | 'outside'
 }
 
-export const headerLinks: IHeaderNav = {
+export const headerLinks: Pick<IHeaderNav, 'links'> = {
 	links: [
 		{
 			link: '/#technologies',

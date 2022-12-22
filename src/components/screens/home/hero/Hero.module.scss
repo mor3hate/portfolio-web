@@ -1,0 +1,7 @@
+.hero {
+	> h1 {
+		@apply tracking-wider font-medium text-shadow px-2 h-28 sm:h-[12rem] md:h-[20rem] lg:h-[28rem];
+		font-size: 15vw;
+		line-height: 14vw;
+	}
+}

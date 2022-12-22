@@ -1,0 +1,47 @@
+@import '../../../../styles/mixins';
+
+.projectItem {
+	@apply rounded-2xl overflow-hidden w-full relative h-full;
+	box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
+	@include fade-bg-gradient;
+	.img {
+		@apply image-bg;
+	}
+}
+.projectItemTextContainer {
+	@apply absolute top-10 left-5 z-2;
+}
+
+.links {
+	@apply absolute bottom-5 left-5 z-2;
+}
+
+.projectTitle {
+	@apply text-4xl font-medium text-shadow uppercase;
+}
+.projectTech {
+	@apply flex gap-1 mt-1;
+}
+
+.swiperMain {
+	width: 100% !important;
+	height: 100% !important;
+	@media (max-width: 768px) {
+		height: 70% !important;
+	}
+	@media (max-width: 640px) {
+		height: 60% !important;
+	}
+}
+
+.swiperSlide {
+	@apply flex items-center justify-center p-4;
+	width: 60% !important;
+	height: 90% !important;
+	@media (max-width: 768px) {
+		width: 70% !important;
+	}
+	@media (max-width: 640px) {
+		width: 100% !important;
+	}
+}

@@ -7,8 +7,75 @@ body {
 	height: 100%;
 	padding: 0;
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-family: Roboto, sans-serif;
+	@apply transition-colors dark:bg-gray-400;
+}
+
+.Hero_hero__ggmZc {
+	> h1 {
+		@apply dark:text-violet;
+	}
+}
+
+.HeaderNav_link__jMlJr {
+	> a {
+		@apply dark:text-green transition-opacity dark:opacity-70;
+		&:hover {
+			@apply dark:opacity-100;
+		}
+		&:before {
+			@apply dark:bg-green;
+		}
+		&:after {
+			@apply dark:bg-green;
+		}
+	}
+}
+
+.Logo_logo__xzhr_ {
+	@apply dark:text-white;
+}
+
+.ThemeSwitcher_container__NI7HN {
+	> svg {
+		@apply dark:fill-white;
+	}
+}
+
+.Header_header__uDZjd {
+	@apply dark:bg-gray-400;
+}
+
+.SubHeading_subHeading__AN0Lb {
+	@apply dark:text-violet;
+}
+
+.grecaptcha-badge {
+	opacity: 0;
+}
+
+.Footer_footerForm__ts8WX {
+	> h3 {
+		@apply dark:text-violet;
+	}
+	> form {
+		.Field_field__RNu9e {
+			> label {
+				> span {
+					@apply dark:text-green;
+				}
+				> input {
+					@apply dark:text-white;
+				}
+			}
+		}
+	}
+}
+
+.Footer_mailLink__znoiC {
+	> span {
+		@apply dark:text-green dark:opacity-70;
+	}
 }
 
 a {
@@ -18,4 +85,13 @@ a {
 
 * {
 	box-sizing: border-box;
+}
+
+.swiper-scrollbar {
+	height: 0.5rem !important;
+	bottom: 10px !important;
+}
+
+.swiper-scrollbar-drag {
+	@apply dark:bg-green;
 }

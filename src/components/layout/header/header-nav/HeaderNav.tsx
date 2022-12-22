@@ -1,17 +1,46 @@
-import { IHeaderNav } from '@/components/layout/header/header-nav/header-nav.interface'
-import HeaderNavItem from '@/components/layout/header/header-nav/HeaderNavItem'
+import { IHeaderNav } from './header-nav.interface'
+import HeaderNavItem from './HeaderNavItem'
 import Button from '@/ui/button/Button'
+import ThemeSwitcher from '@/ui/theme-switcher/ThemeSwitcher'
+import { useOutside } from '@/hooks/useOutside'
+import Modal from '@/ui/modal/Modal'
 import styles from './HeaderNav.module.scss'
+import clsx from 'clsx'
+import Form from '@/ui/form/Form'
 
-export default function HeaderNav({ links }: IHeaderNav) {
+export default function HeaderNav({ links, variant }: IHeaderNav) {
+	const { isShow, setIsShow, ref } = useOutside(false)
+
 	return (
-		<nav>
-			<ul className={styles.nav}>
-				{links.map(l => (
-					<HeaderNavItem link={l.link} text={l.text} key={l.link} />
-				))}
-				<Button>Let&apos;s talk!</Button>
-			</ul>
-		</nav>
+		<>
+			<nav>
+				<ul
+					className={clsx(styles.nav, {
+						[styles.verticalNav]: variant === 'inside'
+					})}
+				>
+					{variant === 'outside' && <ThemeSwitcher />}
+					{links.map(l => (
+						<HeaderNavItem
+							link={l.link}
+							text={l.text}
+							key={l.link}
+							variant={variant}
+						/>
+					))}
+					<Button onClick={() => setIsShow(true)} title='Contact'>
+						Let&apos;s talk!
+					</Button>
+				</ul>
+			</nav>
+			<Modal
+				isShow={isShow}
+				setIsShow={setIsShow}
+				title='Keep in touch'
+				ref={ref}
+			>
+				<Form />
+			</Modal>
+		</>
 	)
 }

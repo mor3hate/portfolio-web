@@ -1,0 +1,6 @@
+.container {
+	@apply cursor-pointer;
+	> svg {
+		@apply w-8 h-8;
+	}
+}

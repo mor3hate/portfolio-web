@@ -1,0 +1,43 @@
+.footer {
+	@apply flex justify-center gap-20 items-center w-screen snap-center mt-12 flex-wrap-reverse p-2;
+	height: 80vh;
+	@media (max-width: 876.98px) {
+		@apply gap-0;
+	}
+}
+
+.footerSocial {
+	@apply flex flex-col items-center;
+	> li {
+		@apply list-none flex gap-1 items-center;
+		&:hover {
+			> svg {
+				@apply fill-violet;
+			}
+		}
+		> svg {
+			@apply w-8 h-8 transition-colors;
+		}
+	}
+}
+
+.footerForm {
+	> h3 {
+		@apply text-center text-2xl font-medium;
+	}
+}
+
+.mailLink {
+	@apply flex items-center gap-1;
+	&:hover {
+		> svg {
+			@apply fill-violet;
+		}
+	}
+	> svg {
+		@apply w-8 h-8 transition-colors;
+	}
+	> span {
+		@apply font-medium;
+	}
+}

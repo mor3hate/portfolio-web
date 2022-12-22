@@ -1,26 +1,33 @@
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
+import HeaderNav from '@/layout/header/header-nav/HeaderNav'
+import { headerLinks } from '@/layout/header/header-nav/header-nav.interface'
+import SocialLinksContainer from '@/ui/social-links-container/SocialLinksContainer'
+import { ISocialLinkContainer } from '@/ui/social-links-container/social-link.interface'
 import styles from './HamburgerMenu.module.scss'
 
-type IHamburgerMenu = {
+interface IHamburgerMenu extends ISocialLinkContainer {
 	show: boolean
 }
 
-export default function HamburgerMenu({ show }: IHamburgerMenu) {
+export default function HamburgerMenu({ show, links }: IHamburgerMenu) {
 	return (
-		<motion.div
-			className={styles.hamburgerMenu}
-			animate={
-				show
-					? {
-							right: 0,
-							opacity: 1
-					  }
-					: {
-							left: '-100%',
-							opacity: 0
-					  }
-			}
-			transition={{ duration: 0.5 }}
-		></motion.div>
+		<AnimatePresence>
+			{show && (
+				<motion.div
+					className={styles.hamburgerMenu}
+					key='hamburger-menu'
+					initial={{ opacity: 0, left: '-100%' }}
+					animate={{
+						left: 0,
+						opacity: 1
+					}}
+					exit={{ opacity: 0, left: '-100%' }}
+					transition={{ duration: 0.6 }}
+				>
+					<HeaderNav links={headerLinks.links} variant='inside' />
+					<SocialLinksContainer links={links} />
+				</motion.div>
+			)}
+		</AnimatePresence>
 	)
 }
