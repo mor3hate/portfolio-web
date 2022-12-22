@@ -1,7 +1,7 @@
 import { IFetchPost } from '@/shared/types/post-fetch-types'
 
 export const fetchHelper = async <T>(path: string) => {
-	const res = await fetch(`/api/${path}`)
+	const res = await fetch(`${process.env.SERVER_URL}/${path}`)
 	return (await res.json()) as T
 }
 
@@ -16,7 +16,7 @@ export const fetchPostHelper = async ({
 		const token = await executeRecaptcha()
 		if (!token) return
 
-		await fetch(`/api/${path}`, {
+		await fetch(`${process.env.SERVER_URL}/${path}`, {
 			method: 'POST',
 			headers: {
 				Accept: 'application/json, text/plain, */*',
