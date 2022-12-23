@@ -7,6 +7,7 @@ import { IAbout } from '@/shared/types/about-me.types'
 import { ITechnologyGalleryItem } from '@/ui/technologies-gallery/technologies.interface'
 import { IProjectContainerItem } from '@/ui/projects-container/projects-interface'
 import { IAboutContainerItem } from '@/ui/about-container/about-container.interface'
+import { imageBuilder } from '@/helpers/image.helper'
 
 export default function HomePage({ technologies, projects, about }: IHome) {
 	return <Home technologies={technologies} projects={projects} about={about} />
@@ -18,7 +19,7 @@ export async function getStaticProps() {
 			'getTechnologies'
 		)
 		const technologies: ITechnologyGalleryItem[] = technologiesData.map(t => ({
-			imagePath: '/icon',
+			imagePath: imageBuilder(t.image.asset._ref),
 			name: t.name,
 			progress: t.progress,
 			_id: t._id
@@ -29,7 +30,7 @@ export async function getStaticProps() {
 		)
 
 		const projects: IProjectContainerItem[] = projectsData.map(p => ({
-			imagePath: '/icon',
+			imagePath: imageBuilder(p.image.asset._ref),
 			_id: p._id,
 			technologies: p.technologies,
 			title: p.title,
@@ -40,8 +41,8 @@ export async function getStaticProps() {
 
 		const about: IAboutContainerItem[] = [
 			{
-				bio: aboutData[0].bio || [],
-				imagePath: '/icon'
+				bio: aboutData[0].bio,
+				imagePath: imageBuilder(aboutData[0].image.asset._ref)
 			}
 		]
 
