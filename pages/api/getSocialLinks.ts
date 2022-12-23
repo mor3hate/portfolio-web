@@ -8,7 +8,7 @@ import {
 
 export default async function getSocialLinks(
 	req: NextApiRequest,
-	res: NextApiResponse<ISocialLinkContainer>
+	res: NextApiResponse<Pick<ISocialLinkContainer, 'links'>>
 ) {
 	const links: ISocialLinkItem[] = await client.fetch(socialQuery)
 	res.status(200).json({ links })
