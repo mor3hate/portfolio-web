@@ -10,7 +10,7 @@ const nextConfig = {
 		PROJECT_ID: process.env.REACT_PROJECT_ID,
 		DATASET: process.env.REACT_DATASET,
 		API_VERSION: process.env.REACT_API_VERSION,
-		SERVER_URL: process.env.REACT_SERVER_URL,
+		SERVER_URL: process.env.NEXT_PUBLIC_VERCEL_URL,
 		MAIL_PASSWORD: process.env.REACT_MAIL_PASSWORD,
 		MAIL_USER: process.env.REACT_MAIL_USER,
 		MAIL_PUBLIC: process.env.REACT_MAIL_PUBLIC,
