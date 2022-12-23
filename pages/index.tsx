@@ -20,7 +20,7 @@ export async function getStaticProps() {
 		)
 		const technologies: ITechnologyGalleryItem[] = technologiesData.map(t => ({
 			imagePath: imageBuilder(t.image.asset._ref),
-			name: t.name || '',
+			name: t.name,
 			progress: t.progress,
 			_id: t._id
 		}))
