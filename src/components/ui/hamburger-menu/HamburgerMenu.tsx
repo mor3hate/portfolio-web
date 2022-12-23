@@ -5,7 +5,7 @@ import SocialLinksContainer from '@/ui/social-links-container/SocialLinksContain
 import { ISocialLinkContainer } from '@/ui/social-links-container/social-link.interface'
 import styles from './HamburgerMenu.module.scss'
 
-interface IHamburgerMenu extends ISocialLinkContainer {
+interface IHamburgerMenu extends Pick<ISocialLinkContainer, 'links'> {
 	show: boolean
 }
 
