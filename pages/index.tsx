@@ -19,7 +19,7 @@ export async function getStaticProps() {
 			'getTechnologies'
 		)
 		const technologies: ITechnologyGalleryItem[] = technologiesData.map(t => ({
-			imagePath: imageBuilder(t.image.asset._ref),
+			imagePath: imageBuilder(t.image.asset._ref) || '/icon',
 			name: t.name,
 			progress: t.progress,
 			_id: t._id
@@ -30,7 +30,7 @@ export async function getStaticProps() {
 		)
 
 		const projects: IProjectContainerItem[] = projectsData.map(p => ({
-			imagePath: imageBuilder(p.image.asset._ref),
+			imagePath: imageBuilder(p.image.asset._ref) || '/icon',
 			_id: p._id,
 			technologies: p.technologies,
 			title: p.title,
@@ -41,8 +41,8 @@ export async function getStaticProps() {
 
 		const about: IAboutContainerItem[] = [
 			{
-				bio: aboutData[0].bio,
-				imagePath: imageBuilder(aboutData[0].image.asset._ref)
+				bio: aboutData[0].bio || [],
+				imagePath: imageBuilder(aboutData[0].image.asset._ref) || '/icon'
 			}
 		]
 
