@@ -1,6 +1,6 @@
 .footer {
-	@apply flex justify-center gap-20 items-center w-screen snap-center mt-12 flex-wrap-reverse p-2;
-	height: 80vh;
+	@apply flex justify-center gap-20 items-center w-screen snap-start mt-12 flex-wrap-reverse px-2 pb-10;
+	height: 100%;
 	@media (max-width: 876.98px) {
 		@apply gap-0;
 	}

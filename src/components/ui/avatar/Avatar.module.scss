@@ -19,8 +19,8 @@
 
 .ripple {
 	@apply absolute rounded-full bg-violet bg-opacity-20;
-	height: 20rem;
-	width: 20rem;
+	height: 10rem;
+	width: 10rem;
 	transform: scale(0);
 	animation: ripple 2s linear infinite;
 	will-change: transform;
