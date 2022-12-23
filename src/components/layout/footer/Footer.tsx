@@ -34,7 +34,7 @@ export default function Footer() {
 						mor3work.box@gmail.com
 					</Link>
 				</li>
-				<SocialLinksContainer links={data || []} />
+				<SocialLinksContainer links={data || []} variant='footer' />
 			</motion.div>
 		</footer>
 	)

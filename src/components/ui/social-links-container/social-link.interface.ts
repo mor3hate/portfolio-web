@@ -8,4 +8,5 @@ export interface ISocialLinkItem {
 
 export interface ISocialLinkContainer {
 	links: ISocialLinkItem[]
+	variant: 'footer' | 'menu'
 }

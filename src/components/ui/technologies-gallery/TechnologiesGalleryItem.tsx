@@ -16,7 +16,9 @@ export default function TechnologiesGalleryItem({
 
 	return (
 		<motion.article
-			className={styles.technologyItem}
+			className={clsx(styles.technologyItem, {
+				[styles.techHover]: hover
+			})}
 			initial={{ opacity: 0, translateX: -50 }}
 			whileInView={{ opacity: 1, translateX: 0 }}
 			viewport={{ once: true }}
@@ -26,6 +28,7 @@ export default function TechnologiesGalleryItem({
 			}}
 			onHoverStart={() => setHover(true)}
 			onHoverEnd={() => setHover(false)}
+			onClick={() => setHover(!hover)}
 		>
 			<div
 				className={clsx(styles.itemFront, {

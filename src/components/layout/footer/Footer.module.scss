@@ -18,12 +18,20 @@
 		> svg {
 			@apply w-8 h-8 transition-colors;
 		}
+		> a {
+			@apply block;
+		}
 	}
 }
 
 .footerForm {
 	> h3 {
 		@apply text-center text-2xl font-medium;
+	}
+	> form {
+		> p {
+			@apply text-center mt-6;
+		}
 	}
 }
 

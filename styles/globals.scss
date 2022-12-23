@@ -43,7 +43,7 @@ body {
 }
 
 .Header_header__uDZjd {
-	@apply dark:bg-gray-400;
+	@apply dark:bg-gray-rgba;
 }
 
 .SubHeading_subHeading__AN0Lb {
@@ -75,6 +75,17 @@ body {
 .Footer_mailLink__znoiC {
 	> span {
 		@apply dark:text-green dark:opacity-70;
+	}
+}
+
+.SocialLinksContainer_containerFooter__5peMA {
+	> a {
+		> svg {
+			@apply dark:fill-[#9a6e52];
+		}
+		> span {
+			@apply dark:text-[#9a6e52];
+		}
 	}
 }
 

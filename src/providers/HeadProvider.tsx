@@ -15,7 +15,6 @@ export default function HeadProvider({ children }: PropsWithChildren) {
 				<meta name='apple-mobile-web-app-status-bar-style' content='default' />
 				<meta name='apple-mobile-web-app-title' content='Michael portfolio' />
 				<meta name='mobile-web-app-capable' content='yes' />
-
 				<meta name='msapplication-tap-highlight' content='no' />
 			</Head>
 			{children}

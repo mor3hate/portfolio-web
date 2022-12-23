@@ -25,7 +25,7 @@ export default function HamburgerMenu({ show, links }: IHamburgerMenu) {
 					transition={{ duration: 0.6 }}
 				>
 					<HeaderNav links={headerLinks.links} variant='inside' />
-					<SocialLinksContainer links={links} />
+					<SocialLinksContainer links={links} variant='menu' />
 				</motion.div>
 			)}
 		</AnimatePresence>

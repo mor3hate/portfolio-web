@@ -1,17 +1,22 @@
+import { useRef } from 'react'
 import Image from 'next/image'
 import clsx from 'clsx'
+import { useInView } from 'framer-motion'
 import styles from './Avatar.module.scss'
 
 type IAvatar = {
 	imagePath: string
-	variant: 'square' | 'rounded'
+	variant: 'rounded-anim' | 'rounded'
 }
 
 export default function Avatar({ imagePath, variant }: IAvatar) {
+	const ref = useRef<HTMLSpanElement>(null)
+	const isInView = useInView(ref)
+
 	return (
 		<div
 			className={clsx(styles.avatar, {
-				[styles.square]: variant === 'square'
+				[styles.roundedAnim]: variant === 'rounded-anim'
 			})}
 		>
 			<Image
@@ -23,9 +28,17 @@ export default function Avatar({ imagePath, variant }: IAvatar) {
               18rem
 				'
 				priority
-				unoptimized
+				unoptimized={variant === 'rounded'}
 				className={styles.avatarImg}
 			/>
+			{variant === 'rounded-anim' && (
+				<span
+					ref={ref}
+					className={clsx({
+						[styles.ripple]: isInView
+					})}
+				/>
+			)}
 		</div>
 	)
 }

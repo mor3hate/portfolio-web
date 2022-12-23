@@ -22,7 +22,7 @@ export default function ProjectItem({
 				</ul>
 			</div>
 			<div className={styles.links}>
-				<SocialLinksContainer links={links} />
+				<SocialLinksContainer links={links} variant='menu' />
 			</div>
 		</article>
 	)

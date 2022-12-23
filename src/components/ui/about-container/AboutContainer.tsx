@@ -6,7 +6,7 @@ import styles from './AboutContainer.module.scss'
 export default function AboutContainer({ items }: IAboutContainer) {
 	return (
 		<div className={styles.aboutContainer}>
-			<Avatar imagePath={items[0].imagePath} variant='square' />
+			<Avatar imagePath={items[0].imagePath} variant='rounded-anim' />
 			<motion.div
 				className={styles.aboutContainerText}
 				initial={{ x: '100%', opacity: 0.5 }}

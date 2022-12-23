@@ -1,6 +1,6 @@
 .layout {
-	@apply flex flex-col w-screen h-screen;
+	@apply flex flex-col w-screen h-screen relative;
 	.main {
-		@apply w-full h-full snap-y snap-mandatory overflow-y-scroll overflow-x-hidden scroll-smooth;
+		@apply w-full h-full snap-y snap-mandatory overflow-y-scroll overflow-x-hidden scroll-smooth scroll-pt-10;
 	}
 }
