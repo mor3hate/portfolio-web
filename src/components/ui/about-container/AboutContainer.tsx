@@ -18,11 +18,11 @@ export default function AboutContainer({ items }: IAboutContainer) {
 					<span />
 					<span />
 					<h3>Bio.js</h3>
-					{items[0].bio.map(b => (
-						<pre key={b.children[0]._key}>
-							<code>{b.children[0].text}</code>
-						</pre>
-					))}
+					{/*{items[0].bio.map(b => (*/}
+					{/*	<pre key={b.children[0]._key}>*/}
+					{/*		<code>{b.children[0].text}</code>*/}
+					{/*	</pre>*/}
+					{/*))}*/}
 				</div>
 			</motion.div>
 		</div>
