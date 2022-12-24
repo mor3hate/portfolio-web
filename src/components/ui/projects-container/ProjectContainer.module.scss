@@ -20,7 +20,7 @@
 	@apply text-4xl font-medium text-shadow uppercase;
 }
 .projectTech {
-	@apply flex gap-1 mt-1;
+	@apply flex gap-1 mt-1 flex-wrap;
 }
 
 .swiperMain {
