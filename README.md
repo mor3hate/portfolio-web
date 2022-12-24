@@ -1,34 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal portfolio website
 
-## Getting Started
+This project was created via React, NextJS, React Query, SanityCMS, Framer Motion and TailwindCSS
 
-First, run the development server:
+## Deployment: [CLICK](https://michael-portfolio-red.vercel.app/)
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file.
+
+These are **Sanity CMS** configure variables:
+
+`REACT_PROJECT_ID`
+
+`REACT_DATASET`
+
+`REACT_API_VERSION`
+
+Variables for **NodeMailer** to work with contact form:
+
+`REACT_MAIL_PASSWORD`
+
+`REACT_MAIL_USER`
+
+`REACT_MAIL_PUBLIC`
+
+**reCAPTCHA**:
+
+`NEXT_PUBLIC_RECAPTCHA_KEY`
+
+`REACT_RECAPTCHA_SECRET_KEY`
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
+  git clone https://github.com/mor3hate/portfolio-web.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+  yarn install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Register and configure your Sanity studio
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Register for Google reCAPTCHA to get keys
 
-## Learn More
+Start the app in dev
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+  yarn dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Start the app in production
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+  yarn build
+```
 
-## Deploy on Vercel
+then
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+  yarn start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Screenshots
+
+![App Screenshot](https://i.imgur.com/Qla6gvn.png)
+
+![App Screenshot](https://i.imgur.com/N8y0vRP.png)

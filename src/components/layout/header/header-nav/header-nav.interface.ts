@@ -12,16 +12,16 @@ export interface IHeaderNav {
 export const headerLinks: Pick<IHeaderNav, 'links'> = {
 	links: [
 		{
-			link: '/#technologies',
-			text: 'Technologies'
+			link: '/#about-me',
+			text: 'About me'
 		},
 		{
 			link: '/#projects',
 			text: 'Projects'
 		},
 		{
-			link: '/#about-me',
-			text: 'About me'
+			link: '/#technologies',
+			text: 'Technologies'
 		}
 	]
 }
