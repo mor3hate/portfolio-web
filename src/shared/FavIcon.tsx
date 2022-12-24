@@ -1,24 +1,22 @@
-import { changeFavIcon } from '@/helpers/changeFavIcon'
-
 export default function FavIcon() {
 	return (
 		<>
 			<link
 				rel='apple-touch-icon'
 				sizes='180x180'
-				href={changeFavIcon('apple-touch-icon.png')}
+				href='/images/favicon-light/apple-touch-icon.png'
 			/>
 			<link
 				rel='icon'
 				type='image/png'
 				sizes='32x32'
-				href={changeFavIcon('favicon-32x32.png')}
+				href='/images/favicon-light/favicon-32x32.png'
 			/>
 			<link
 				rel='icon'
 				type='image/png'
 				sizes='16x16'
-				href={changeFavIcon('favicon-16x16.png')}
+				href='/images/favicon-light/favicon-16x16.png'
 			/>
 
 			<link rel='manifest' href='/site.webmanifest' />

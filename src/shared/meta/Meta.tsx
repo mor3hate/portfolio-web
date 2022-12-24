@@ -10,7 +10,7 @@ export default function Meta({
 	description
 }: PropsWithChildren<IMeta>) {
 	const { asPath } = useRouter()
-	const currentUrl = `http://localhost:3000/${asPath}`
+	const currentUrl = `https://michael-portfolio-red.vercel.app${asPath}`
 	return (
 		<>
 			<Head>
