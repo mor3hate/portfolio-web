@@ -1,5 +1,6 @@
 .techContainer {
 	@apply flex flex-wrap gap-10 px-12 justify-center;
+	max-width: 1200px;
 }
 
 .technologyItem {
