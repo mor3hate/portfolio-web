@@ -1,4 +1,4 @@
-import { useCallback, useContext } from 'react'
+import { useCallback, useContext, useState } from 'react'
 import dynamic from 'next/dynamic'
 import { useOutside } from '@/hooks/useOutside'
 import Logo from '@/ui/logo/Logo'
@@ -15,16 +15,16 @@ const Hamburger = dynamic(() => import('hamburger-react').then(h => h.Cross), {
 })
 
 export default function Header() {
-	const { isShow, setIsShow, ref } = useOutside(false)
+	const [isVisible, setIsVisible] = useState(false)
 
 	const { data } = useHeader()
 
 	const { isDark } = useContext(ThemeContext)
 
 	const handleBurgerClick = useCallback(() => {
-		setIsShow(!isShow)
+		setIsVisible(!isVisible)
 		document.body.style.overflow = 'hidden'
-	}, [isShow])
+	}, [isVisible])
 
 	return (
 		<>
@@ -45,13 +45,17 @@ export default function Header() {
 							size={30}
 							color={isDark ? 'white' : 'black'}
 							duration={0.8}
-							toggled={isShow}
+							toggled={isVisible}
 							onToggle={() => handleBurgerClick()}
 						/>
 					</span>
 				</motion.div>
 			</header>
-			<HamburgerMenu show={isShow} links={data || []} ref={ref} />
+			<HamburgerMenu
+				show={isVisible}
+				links={data || []}
+				setIsVisible={setIsVisible}
+			/>
 		</>
 	)
 }

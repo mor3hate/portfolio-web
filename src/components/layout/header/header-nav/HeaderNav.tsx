@@ -8,7 +8,11 @@ import styles from './HeaderNav.module.scss'
 import clsx from 'clsx'
 import Form from '@/ui/form/Form'
 
-export default function HeaderNav({ links, variant }: IHeaderNav) {
+export default function HeaderNav({
+	links,
+	variant,
+	setIsVisible
+}: IHeaderNav) {
 	const { isShow, setIsShow, ref } = useOutside(false)
 
 	return (
@@ -18,6 +22,7 @@ export default function HeaderNav({ links, variant }: IHeaderNav) {
 					className={clsx(styles.nav, {
 						[styles.verticalNav]: variant === 'inside'
 					})}
+					onClick={() => setIsVisible(false)}
 				>
 					{variant === 'outside' && <ThemeSwitcher />}
 					{links.map(l => (
