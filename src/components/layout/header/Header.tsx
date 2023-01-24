@@ -23,7 +23,11 @@ export default function Header() {
 
 	const handleBurgerClick = useCallback(() => {
 		setIsVisible(!isVisible)
-		document.body.style.overflow = 'hidden'
+		if (isVisible) {
+			document.body.style.overflow = 'hidden'
+		} else {
+			document.body.style.overflow = ''
+		}
 	}, [isVisible])
 
 	return (
