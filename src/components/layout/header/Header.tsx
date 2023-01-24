@@ -28,7 +28,7 @@ export default function Header() {
 
 	return (
 		<>
-			<header className={styles.header} ref={ref}>
+			<header className={styles.header}>
 				<Logo />
 				<motion.div
 					className={styles.navContainer}
@@ -51,7 +51,7 @@ export default function Header() {
 					</span>
 				</motion.div>
 			</header>
-			<HamburgerMenu show={isShow} links={data || []} />
+			<HamburgerMenu show={isShow} links={data || []} ref={ref} />
 		</>
 	)
 }
