@@ -36,7 +36,11 @@ export default function Header() {
 					animate={{ x: 0, opacity: 1 }}
 					transition={{ duration: 0.8 }}
 				>
-					<HeaderNav links={headerLinks.links} variant='outside' />
+					<HeaderNav
+						links={headerLinks.links}
+						variant='outside'
+						setIsVisible={setIsVisible}
+					/>
 					<span>
 						<Hamburger
 							rounded

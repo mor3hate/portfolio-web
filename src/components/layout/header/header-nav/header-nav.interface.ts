@@ -4,10 +4,11 @@ export interface IHeaderNavItem {
 	link: string
 	text: string
 	variant?: string
+	setIsVisible: Dispatch<SetStateAction<boolean>>
 }
 
 export interface IHeaderNav {
-	links: IHeaderNavItem[]
+	links: Omit<IHeaderNavItem, 'setIsVisible'>[]
 	variant: 'inside' | 'outside'
 	setIsVisible: Dispatch<SetStateAction<boolean>>
 }

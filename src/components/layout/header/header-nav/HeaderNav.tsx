@@ -22,7 +22,6 @@ export default function HeaderNav({
 					className={clsx(styles.nav, {
 						[styles.verticalNav]: variant === 'inside'
 					})}
-					onClick={() => setIsVisible(false)}
 				>
 					{variant === 'outside' && <ThemeSwitcher />}
 					{links.map(l => (
@@ -30,6 +29,7 @@ export default function HeaderNav({
 							link={l.link}
 							text={l.text}
 							key={l.link}
+							setIsVisible={setIsVisible}
 							variant={variant}
 						/>
 					))}
